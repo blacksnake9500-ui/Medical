@@ -29,6 +29,11 @@ button {
     }
 }
 
+::selection {
+    background-color: #00B4DC;
+    color: white;
+}
+
 nav {
     .container {
         position: relative;
@@ -101,6 +106,33 @@ nav {
                 padding: 5px 30px;
                 outline: none;
                 color: #00B4DC;
+
+                &::placeholder {
+                    color: #00B4DC;
+                    font-weight: 600;
+                    background: linear-gradient(90deg, #00B4DC, darkblue, #00B4DC);
+                    background-position: center;
+                    background-size: 200%;
+                    -webkit-background-clip: text;
+                    background-clip: text;
+                    -webkit-text-fill-color: transparent;
+                    color: transparent;
+                    animation: bg 4s linear infinite;
+
+                    @keyframes bg {
+                        0% {
+                            background-position: 0%;
+                        }
+
+                        50% {
+                            background-position: 100%;
+                        }
+
+                        100% {
+                            background-position: 200%;
+                        }
+                    }
+                }
             }
 
         }
@@ -183,6 +215,231 @@ nav {
                 width: 250px;
                 transition: opacity 0.4s ease;
                 opacity: 1;
+            }
+        }
+    }
+}
+
+.intro {
+    .container {
+        padding: 50px 0px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 30px;
+        flex-wrap: wrap;
+
+        .intro_card {
+            width: 500px;
+            height: 300px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            overflow: hidden;
+            position: relative;
+            padding: 10px;
+            background-color: #F4F6FA;
+            border-radius: 10px;
+            transition: all .3s ease;
+            cursor: pointer;
+
+            &:hover img {
+                transform: translateY(-40px);
+            }
+
+            .intro_info {
+                width: 300px;
+
+                button {
+                    padding: 10px 20px;
+                    border: 1px solid black;
+                    border-radius: 50px;
+                    background-color: white;
+                    color: black;
+                    margin-top: 50px;
+                }
+            }
+
+            img {
+                position: absolute;
+                bottom: -350px;
+                right: -100px;
+                transition: all .3s ease;
+            }
+        }
+    }
+}
+
+.two {
+    background-image: url("../imgs/two\ bg\ img.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    .container {
+        display: flex;
+        align-items: right;
+        justify-content: right;
+
+        .two_card {
+            width: 500px;
+            height: 100%;
+            backdrop-filter: blur(10px);
+            padding: 50px 0px;
+
+            h3 {
+                color: #00B4DC;
+            }
+
+            h2 {
+                padding: 20px 0px;
+            }
+
+            button {
+                padding: 10px 20px;
+                background-color: #00B4DC;
+                color: white;
+                border: none;
+                border-radius: 50px;
+                margin-top: 30px;
+            }
+        }
+    }
+}
+
+.three {
+    .container {
+        padding: 50px 0px;
+
+        .three_title {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 30px 0px;
+
+            h1 {
+                span {
+                    font-weight: 800;
+                    color: #00B4DC;
+                }
+            }
+
+            .three_arrow {
+                display: flex;
+                align-items: center;
+                gap: 20px;
+
+                i {
+                    width: 50px;
+                    height: 50px;
+                    border-radius: 50%;
+                    color: #00B4DC;
+                    box-shadow: 0px 0px 10px #b5c7eb;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    transition: all .3s ease;
+                    cursor: pointer;
+
+                    &:hover {
+                        transform: scale(1.1);
+                    }
+                }
+            }
+        }
+
+        .three_box {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+
+            .three_card {
+                transition: all .3s ease;
+
+                &:hover {
+                    transform: scale(1.1);
+                }
+
+            }
+        }
+    }
+}
+
+.four{
+    .container{
+        padding: 50px 0px;
+        .four_title{
+             display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 30px 0px;
+
+            h1 {
+                span {
+                    font-weight: 800;
+                    color: #00B4DC;
+                }
+            }
+
+            .three_arrow {
+                display: flex;
+                align-items: center;
+                gap: 20px;
+
+                i {
+                    width: 50px;
+                    height: 50px;
+                    border-radius: 50%;
+                    color: #00B4DC;
+                    box-shadow: 0px 0px 10px #b5c7eb;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    transition: all .3s ease;
+                    cursor: pointer;
+
+                    &:hover {
+                        transform: scale(1.1);
+                    }
+                }
+            }
+        }
+        .four_box{
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 20px;
+            .four_card{
+                width: 300px;
+                padding: 10px;
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                flex-direction: column;
+                gap: 10px;
+                background-color: #F4F6FA;
+                border-radius: 1rem;
+                transition: all .3s ease;
+                cursor: pointer;
+                button{
+                    padding: 10px 20px;
+                    border-radius: 50px;
+                    border: none;
+                    background-color: #00B4DC;
+                    color: white;
+                    opacity: 0;
+                }
+                &:hover{
+                    transform: scale(1.03);
+                    box-shadow: 0px 0px 10px #b5c7eb;
+                }
+                &:hover button{
+                    opacity: 1;
+                }
+                img{
+                    object-fit: contain;
+                }
+
             }
         }
     }

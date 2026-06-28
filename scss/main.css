@@ -26,6 +26,16 @@ button:active {
   transform: scale(0.9);
 }
 
+::-moz-selection {
+  background-color: #00B4DC;
+  color: white;
+}
+
+::selection {
+  background-color: #00B4DC;
+  color: white;
+}
+
 nav .container {
   position: relative;
   padding: 0px 0px;
@@ -86,6 +96,41 @@ nav .container .nav_bottom input {
   padding: 5px 30px;
   outline: none;
   color: #00B4DC;
+}
+nav .container .nav_bottom input::-moz-placeholder {
+  color: #00B4DC;
+  font-weight: 600;
+  background: linear-gradient(90deg, #00B4DC, darkblue, #00B4DC);
+  background-position: center;
+  background-size: 200%;
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  color: transparent;
+  animation: bg 4s linear infinite;
+}
+nav .container .nav_bottom input::placeholder {
+  color: #00B4DC;
+  font-weight: 600;
+  background: linear-gradient(90deg, #00B4DC, darkblue, #00B4DC);
+  background-position: center;
+  background-size: 200%;
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  color: transparent;
+  animation: bg 4s linear infinite;
+}
+@keyframes bg {
+  0% {
+    background-position: 0%;
+  }
+  50% {
+    background-position: 100%;
+  }
+  100% {
+    background-position: 200%;
+  }
 }
 nav .container .nav_info {
   position: absolute;
@@ -153,4 +198,196 @@ nav .container .nav_info ul li:hover {
   width: 250px;
   transition: opacity 0.4s ease;
   opacity: 1;
+}
+
+.intro .container {
+  padding: 50px 0px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 30px;
+  flex-wrap: wrap;
+}
+.intro .container .intro_card {
+  width: 500px;
+  height: 300px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  overflow: hidden;
+  position: relative;
+  padding: 10px;
+  background-color: #F4F6FA;
+  border-radius: 10px;
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+.intro .container .intro_card:hover img {
+  transform: translateY(-40px);
+}
+.intro .container .intro_card .intro_info {
+  width: 300px;
+}
+.intro .container .intro_card .intro_info button {
+  padding: 10px 20px;
+  border: 1px solid black;
+  border-radius: 50px;
+  background-color: white;
+  color: black;
+  margin-top: 50px;
+}
+.intro .container .intro_card img {
+  position: absolute;
+  bottom: -350px;
+  right: -100px;
+  transition: all 0.3s ease;
+}
+
+.two {
+  background-image: url("../imgs/two bg img.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.two .container {
+  display: flex;
+  align-items: right;
+  justify-content: right;
+}
+.two .container .two_card {
+  width: 500px;
+  height: 100%;
+  backdrop-filter: blur(10px);
+  padding: 50px 0px;
+}
+.two .container .two_card h3 {
+  color: #00B4DC;
+}
+.two .container .two_card h2 {
+  padding: 20px 0px;
+}
+.two .container .two_card button {
+  padding: 10px 20px;
+  background-color: #00B4DC;
+  color: white;
+  border: none;
+  border-radius: 50px;
+  margin-top: 30px;
+}
+
+.three .container {
+  padding: 50px 0px;
+}
+.three .container .three_title {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 30px 0px;
+}
+.three .container .three_title h1 span {
+  font-weight: 800;
+  color: #00B4DC;
+}
+.three .container .three_title .three_arrow {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+.three .container .three_title .three_arrow i {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  color: #00B4DC;
+  box-shadow: 0px 0px 10px #b5c7eb;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+.three .container .three_title .three_arrow i:hover {
+  transform: scale(1.1);
+}
+.three .container .three_box {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.three .container .three_box .three_card {
+  transition: all 0.3s ease;
+}
+.three .container .three_box .three_card:hover {
+  transform: scale(1.1);
+}
+
+.four .container {
+  padding: 50px 0px;
+}
+.four .container .four_title {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 30px 0px;
+}
+.four .container .four_title h1 span {
+  font-weight: 800;
+  color: #00B4DC;
+}
+.four .container .four_title .three_arrow {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+.four .container .four_title .three_arrow i {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  color: #00B4DC;
+  box-shadow: 0px 0px 10px #b5c7eb;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+.four .container .four_title .three_arrow i:hover {
+  transform: scale(1.1);
+}
+.four .container .four_box {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+}
+.four .container .four_box .four_card {
+  width: 300px;
+  padding: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-direction: column;
+  gap: 10px;
+  background-color: #F4F6FA;
+  border-radius: 1rem;
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+.four .container .four_box .four_card button {
+  padding: 10px 20px;
+  border-radius: 50px;
+  border: none;
+  background-color: #00B4DC;
+  color: white;
+  opacity: 0;
+}
+.four .container .four_box .four_card:hover {
+  transform: scale(1.03);
+  box-shadow: 0px 0px 10px #b5c7eb;
+}
+.four .container .four_box .four_card:hover button {
+  opacity: 1;
+}
+.four .container .four_box .four_card img {
+  -o-object-fit: contain;
+     object-fit: contain;
 }/*# sourceMappingURL=main.css.map */
